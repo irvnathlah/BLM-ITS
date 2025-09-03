@@ -124,11 +124,11 @@ document.addEventListener('DOMContentLoaded', function() {
             "mission1-text": "The primary priority is to ensure that every legal product is in accordance with student needs and can be implemented effectively. Through this escalation, BLM ITS can optimize the ITS Legislative Program as the main guide in formulating a regulation.",
             "mission2-title": "2. Optimization of Aspirations",
             "mission2-text": "In an effort to improve connectivity with students, BLM ITS is committed to building a more effective and systematic aspiration gathering system. In addition, student involvement must always be considered from aspiration gathering to the implementation of regulations or policies to increase active student participation and ensure harmony in the management of aspirations.",
-            "mission3-title": "3. Efektivitas Kontrol",
+            "mission3-title": "3. Control Effectiveness",
             "mission3-text": "The control function carried out by BLM ITS must be encouraged again to ensure the implementation of BEM ITS work programs is in accordance with the Broad Outlines of Work. By compiling a matrix for evaluating the Broad Outlines of Work, BEM ITS performance evaluation needs to be carried out periodically. The results of this evaluation will then be integrated into a constructive recommendation that supports the improvement of work programs.",
-            "mission4-title": "4. Sinergi dan Kolaborasi",
+            "mission4-title": "4. Synergy and Collaboration",
             "mission4-text": "Strong synergy and collaboration are very important to increase the effectiveness of BLM ITS. With participatory discussion forums, BLM ITS can strive to bridge differences in student views to create the synergy of the ITS Student Family.",
-            "mission5-title": "5. Peningkatan Mutu Internal BLM ITS",
+            "mission5-title": "5. Improving the Internal Quality of BLM ITS",
             "mission5-text": "Internal organizational development is also a priority in increasing the competence and professionalism of the layers of BLM ITS. There needs to be a clear internal SOP to ensure effective task division and measurable performance evaluation, so that BLM ITS can function optimally.",
             "title-vision": "Vision & Mission - BLM ITS",
             "contact-heading": "Contact Us",
@@ -304,4 +304,5 @@ document.addEventListener('DOMContentLoaded', function() {
     if (carouselTrack) {
         resetAutoSlide();
     }
+
 });
