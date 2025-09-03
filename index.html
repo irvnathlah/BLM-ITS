@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLM ITS - Keluarga Mahasiswa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-left">
+                <a href="index.html" class="logo-link">
+                    <img src="images/logo-blm-its-header.png" alt="Logo BLM ITS" class="logo">
+                    <div class="header-text">
+                        <span data-key="org-name-1">BADAN LEGISLATIF MAHASISWA</span>
+                        <br>
+                        <span data-key="org-name-2">INSTITUT TEKNOLOGI SEPULUH NOPEMBER</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="nav-right">
+                <ul class="nav-menu">
+                    <li><a href="index.html" data-key="nav-home">Beranda</a></li>
+                    <li><a href="about.html" data-key="nav-about">Tentang Kami</a></li>
+                    <li><a href="visimisi.html" data-key="nav-vision">Visi & Misi</a></li>
+                    <li><a href="contact.html" data-key="nav-contact">Kontak</a></li>
+                </ul>
+
+                <!-- ✅ Language Selector -->
+                <div class="lang-selector">
+                    <div class="lang-display">
+                        <img id="current-flag" src="images/flag-indonesia.png" alt="Bendera Indonesia">
+                        <span id="current-lang-code">ID</span>
+                    </div>
+                    <div class="lang-dropdown">
+                        <div class="lang-option" data-lang="id">
+                            <img src="images/flag-indonesia.png" alt="Bendera Indonesia">
+                            <span data-key="lang-indonesia">Indonesia</span>
+                        </div>
+                        <div class="lang-option" data-lang="en">
+                            <img src="images/flag-uk.jpg" alt="Bendera Inggris">
+                            <span data-key="lang-english">English</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+   
+    <section class="hero">
+        <div class="hero-content fade-in">
+            <h1 data-key="hero-heading">Selamat Datang di Badan Legislatif Mahasiswa ITS</h1>
+            <p data-key="hero-subtext">Lembaga legislatif tertinggi di Keluarga Mahasiswa ITS.</p>
+            <a href="about.html" class="cta-button" data-key="cta-learn-more">Pelajari Lebih Lanjut</a>
+            <button id="myBtn" class="cta-button" data-key="cta-view-cabinet">Lihat Kabinet</button>
+        </div>
+    </section>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" data-key="modal-close-btn">&times;</span>
+            <h2 data-key="modal-heading">Selamat Datang di Kabinet Asvakarana!</h2>
+            <p data-key="modal-text">Silakan gulir ke bawah untuk melihat informasi lebih lanjut mengenai visi dan misi kami.</p>
+            <img src="images/logo-kabinet-blm-its.png" alt="Logo Kabinet Asvakarana" style="max-width: 60%; height: auto; margin-top: 15px;">
+        </div>
+    </div>
+
+<section class="legislasi-carousel fade-in">
+    <div class="carousel-wrapper">
+        <div class="carousel-track">
+            <div class="carousel-slide-page">
+                <a href="musyawarah-besar-v-its.html" class="card-link">
+                    <div class="card">
+                        <h3 class="card-title" data-key="legis-1-title">Musyawarah Besar V ITS</h3>
+                    </div>
+                </a>
+                <a href="uu-kmits.html" class="card-link">
+                    <div class="card">
+                        <h3 class="card-title" data-key="legis-2-title">Undang-Undang KM ITS</h3>
+                    </div>
+                </a>
+                <a href="https://drive.google.com/drive/folders/1Kw8z-JwRcUXPiLPfqiK22b1xG5ZwwzrV" target="_blank" class="card-link">
+                    <div class="card">
+                        <h3 class="card-title" data-key="legis-3-title">Ketetapan MTT ITS</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="carousel-slide-page">
+                <a href="https://docs.google.com/forms/d/1EAecEr4NpyCjk1aFqnqhs-OtSBSTzrpNhAk2S0jnKUc/viewform?edit_requested=true" target="_blank" class="card-link">
+                    <div class="card">
+                        <h3 class="card-title" data-key="legis-4-title">Jaring Aspirasi Terpadu</h3>
+                    </div>
+                </a>
+                <a href="https://drive.google.com/file/d/1gHD3foWHoInbLt1YAfxwWtukodDawB0m/view" target="_blank" class="card-link">
+                    <div class="card">
+                        <h3 class="card-title" data-key="legis-5-title">SOP Kerja Sama / Visitasi</h3>
+                    </div>
+                </a>
+                <a href="https://wa.me/6281230481684" target="_blank" class="card-link">
+                    <div class="card">
+                        <h3 class="card-title" data-key="legis-6-title">Contact Person</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="carousel-nav">
+        <button class="nav-button prev-button">
+            &lt;
+        </button>
+        <button class="nav-button next-button">
+            &gt;
+        </button>
+    </div>
+</section>
+
+    <section class="about fade-in">
+        <div class="container">
+            <h2 data-key="about-heading">Informasi Umum BLM ITS</h2>
+            <p data-key="about-text">Badan Legislatif Mahasiswa Institut Teknologi Sepuluh Nopember (BLM ITS) adalah lembaga legislatif tertinggi di Keluarga Mahasiswa ITS yang bersifat representatif terhadap seluruh mahasiswa ITS. BLM ITS terdiri atas Dewan Mahasiswa dan Senat Mahasiswa. Secara struktural, BLM ITS terdiri dari satu Ketua Umum dan dua Sekretaris Jenderal yang berfungsi sebagai koordinator dan anggota-anggota. Ketua Umum ini berasal dari Dewan Mahasiswa dan dua Sekretaris Jenderal masing-masing berasal dari Senat Mahasiswa dan Dewan Mahasiswa. Berdasarkan Buku KDKM dan HDPSM MUBES V ITS, BAB III tentang Legislatif Mahasiswa pasal 25, BLM ITS bertugas:</p>
+            <a href="about.html" class="cta-button-secondary" data-key="cta-read-more">Baca Selengkapnya</a>
+        </div>
+    </section>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" data-key="modal-close-btn">&times;</span>
+            <h2 data-key="modal-heading">Selamat Datang di Kabinet Asvakarana!</h2>
+            <p data-key="modal-text">Silakan gulir ke bawah untuk melihat informasi lebih lanjut mengenai visi dan misi kami.</p>
+            <img src="images/logo-kabinet-blm-its.png" alt="Logo Kabinet Asvakarana" style="max-width: 60%; height: auto; margin-top: 15px;">
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4 class="footer-heading" data-key="footer-col1-heading">Badan Legislatif Mahasiswa ITS</h4>
+                <p data-key="footer-address">SCC ITS lt. 2<br>Jalan Raya ITS Campus ITS<br>Sukolilo, Surabaya<br>Jawa Timur 60111</p>
+                <p><span data-key="footer-email-label">Email:</span> <a href="mailto:blmkmits@gmail.com">blmkmits@gmail.com</a></p>
+                <div class="footer-images">
+                    <img src="images/logo-blm-its-footer.png" alt="Logo BLM ITS" class="logo">
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4 class="footer-heading" data-key="footer-col2-heading">Tautan Cepat</h4>
+                <ul>
+                    <li><a href="visimisi.html" data-key="footer-link-vm">Visi & Misi</a></li>
+                    <li><a href="about.html" data-key="footer-link-about">Tentang Kami</a></li>
+                    <li><a href="uu-kmits.html" data-key="footer-link-products">Produk Legislasi</a></li>
+                    <li><a href="https://docs.google.com/forms/d/1EAecEr4NpyCjk1aFqnqhs-OtSBSTzrpNhAk2S0jnKUc/viewform?edit_requested=true" target="_blank" data-key="footer-link-aspirations">Aspirasi Mahasiswa</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4 class="footer-heading" data-key="footer-col3-heading">Hubungi Kami</h4>
+                <ul>
+                    <li><a href="https://wa.me/6281336676827" target="_blank" data-key="footer-link-wa">WhatsApp</a></li>
+                    <li><a href="https://www.instagram.com/blm_its/" target="_blank" data-key="footer-link-ig">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/blm_its/" target="_blank">
+                    <i class="fa fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/6281336676827" target="_blank">
+                    <i class="fa fa-whatsapp"></i>
+                </a>
+            </div>
+            <p data-key="footer-copyright">Hak Cipta © 2025 BLM ITS. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
