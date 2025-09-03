@@ -653,11 +653,11 @@ body.visi-misi-page .misi-item p {
 }
 
 .prev-button {
-    left: 300px;
+    left: 50px;
 }
 
 .next-button {
-    right: 300px;
+    right: 50px;
 }
 
 /* --- Gaya Halaman Dokumen --- */
@@ -741,4 +741,5 @@ body.contact-page .contact-info a {
 
 .contact-box a {
     color: #007BFF; /* Warna tautan */
+
 }
