@@ -741,5 +741,56 @@ body.contact-page .contact-info a {
 
 .contact-box a {
     color: #007BFF; /* Warna tautan */
+}
 
+/* --- Aturan untuk Layar Ponsel & Tablet (Media Query) --- */
+@media (max-width: 768px) {
+    
+    /* Atur ulang tata letak nav */
+    nav {
+        flex-direction: column; /* Ubah tata letak menjadi vertikal */
+        height: auto; /* Biarkan tinggi menyesuaikan konten */
+        align-items: flex-start; /* Sejajarkan semua elemen ke kiri */
+        padding: 10px;
+    }
+
+    /* Atur ulang tata letak nav-left agar rapi */
+    .nav-left {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .logo-link {
+        flex-direction: column; /* Teks dan logo disusun ke bawah */
+        gap: 5px;
+        margin-bottom: 10px;
+    }
+
+    /* Atur ulang ukuran logo dan teks */
+    .logo {
+        height: 50px;
+    }
+
+    .header-text {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    /* Atur ulang tata letak nav-menu dan nav-right */
+    .nav-menu {
+        flex-direction: column; /* Menu disusun ke bawah */
+        gap: 10px;
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+    }
+    
+    .nav-right {
+        width: 100%;
+        justify-content: center;
+        margin-top: 15px;
+    }
 }
