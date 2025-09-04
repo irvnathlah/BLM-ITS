@@ -704,11 +704,11 @@ body.visi-misi-page .misi-item p {
 }
 
 .prev-button {
-    left: 25px;
+    left: 10px;
 }
 
 .next-button {
-    right: 25px;
+    right: 10px;
 }
 
 /* --- Gaya Halaman Dokumen --- */
@@ -941,7 +941,7 @@ body.contact-page .contact-info a {
 
     .card {
         /* Atur agar kartu mengambil seluruh lebar yang tersedia di mobile */
-        width: 250px; 
+        width: 200px; 
         height: auto; /* Biarkan tinggi menyesuaikan konten */
         padding: 25px; /* Tambahkan padding agar terlihat lebih baik */
         margin: 0 auto; /* Pusatkan kartu di tengah */
@@ -952,3 +952,4 @@ body.contact-page .contact-info a {
         text-align: center;
     }
 }
+
