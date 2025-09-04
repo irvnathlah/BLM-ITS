@@ -290,60 +290,111 @@ body {
 }
 
 /* --- Gaya Halaman Tentang Kami --- */
-.about-hero {
-    background: url('images/tim-asvakarana.jpeg') no-repeat center center/cover;
-    min-height: 85vh; /* Menggunakan min-height agar bisa menyesuaikan konten */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    padding-top: 120px; /* Jarak agar tidak tumpang tindih dengan header */
-    box-sizing: border-box;
+body.about-page {
+    /* Latar belakang dan overlay halaman */
+    background: url('images/tim-asvakarana.jpeg') no-repeat center center fixed; /* Ganti dengan gambar yang Anda inginkan */
+    background-size: cover;
+    position: relative; /* Penting untuk overlay */
+    min-height: 100vh;
 }
 
-.about-hero-overlay {
-    background-color: rgba(0, 0, 0, 0.6); /* Warna latar belakang semi-transparan */
-    position: absolute;
+body.about-page::before {
+    content: '';
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+/* Mengatur container utama konten halaman */
+.about-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 120px; /* Jarak dari header */
+    padding-bottom: 50px;
 }
 
 .about-hero-content {
+    /* Kontainer utama untuk semua teks di halaman */
     position: relative;
-    z-index: 2;
-    color: white;
+    z-index: 2; /* Di atas overlay */
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 20px 40px;
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
-    max-width: 1200px; /* Menentukan lebar maksimal 800px */
-    margin: 0 auto; /* Memusatkan kotak konten */
-    margin-top: 140px;
+    color: white; /* Warna teks default */
 }
 
-.about-hero-content h1 {
-    font-size: 2.5em;
-    margin-top: 0;
-}
-
-.about-hero-content p {
-    text-align: justify;
-    line-height: 1.6;
-}
-
-.tasks-list {
+/* Gaya untuk kotak konten utama */
+.content-box {
+    background: rgba(255, 255, 255, 0.8); /* Latar belakang kotak putih semi-transparan */
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     text-align: left;
-    margin: 20px 0;
-    padding-left: 20px;
-    list-style-type: disc;
-    color: white;
+    color: #333;
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+    margin-top: 100px;
 }
 
-.tasks-list li {
-    margin-bottom: 10px;
+.content-box h1 {
+    font-size: 2.2em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #00254B;
+    text-align: center;
+}
+
+.content-box p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.content-box .tasks-list {
+    color: #555;
+    padding-left: 20px;
+}
+
+.content-box .tasks-list li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* --- Perbaikan untuk tampilan mobile --- */
+@media (max-width: 768px) {
+    .about-hero {
+        padding-top: 100px;
+    }
+    
+    .about-hero-content {
+        width: 95%;
+        margin-top: 20px;
+    }
+
+    .content-box {
+        padding: 20px;
+    }
+
+    .content-box h1 {
+        font-size: 1.8em;
+    }
+
+    .content-box p, .content-box .tasks-list li {
+        font-size: 0.95em;
+    }
 }
 
 /* --- Gaya Bagian Konten Lainnya --- */
@@ -743,54 +794,139 @@ body.contact-page .contact-info a {
     color: #007BFF; /* Warna tautan */
 }
 
-/* --- Aturan untuk Layar Ponsel & Tablet (Media Query) --- */
+/* --- Tambahkan atau modifikasi CSS berikut di style.css --- */
+
+/* Default: Sembunyikan hamburger dan tampilkan menu normal */
+.hamburger-menu {
+    display: none; /* Sembunyikan tombol hamburger di desktop */
+}
+
+.mobile-menu-container {
+    display: flex; /* Tampilkan menu di desktop (akan diubah di media query) */
+    align-items: center;
+    gap: 30px; /* Jarak antara menu dan opsi bahasa seperti sebelumnya */
+}
+
+/* Modifikasi .nav-right agar menu bahasa dan navigasi tetap sejajar di desktop */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Pastikan ada jarak antara menu dan selector bahasa */
+}
+
+/* --- Media Query untuk Layar Ponsel (max-width: 768px) --- */
 @media (max-width: 768px) {
-    
-    /* Atur ulang tata letak nav */
     nav {
-        flex-direction: column; /* Ubah tata letak menjadi vertikal */
-        height: auto; /* Biarkan tinggi menyesuaikan konten */
-        align-items: flex-start; /* Sejajarkan semua elemen ke kiri */
-        padding: 10px;
+        flex-direction: row; /* Kembali ke baris */
+        justify-content: space-between; /* Sejajarkan logo ke kiri, hamburger ke kanan */
+        align-items: center;
+        padding: 10px 20px;
+        height: 80px; /* Tinggi header yang konsisten */
     }
 
-    /* Atur ulang tata letak nav-left agar rapi */
     .nav-left {
-        width: 100%;
-        justify-content: center;
-        text-align: center;
-        flex-direction: column;
-        gap: 5px;
+        width: auto; /* Biarkan lebar menyesuaikan konten */
+        flex-direction: row; /* Logo dan teks sejajar */
+        text-align: left;
+        gap: 10px;
+        margin: 0; /* Hapus margin yang tidak perlu */
     }
 
     .logo-link {
-        flex-direction: column; /* Teks dan logo disusun ke bawah */
-        gap: 5px;
-        margin-bottom: 10px;
+        flex-direction: row; /* Logo dan teks kembali sejajar di mobile */
+        gap: 10px;
+        margin-bottom: 0;
     }
 
-    /* Atur ulang ukuran logo dan teks */
+    .header-text {
+        font-size: 10px; /* Tetap kecil agar muat */
+        text-align: left;
+    }
+    
     .logo {
         height: 50px;
     }
 
-    .header-text {
-        font-size: 10px;
-        text-align: center;
+    .nav-right {
+        gap: 0; /* Hapus gap di nav-right karena menu masuk ke mobile-menu-container */
     }
 
-    /* Atur ulang tata letak nav-menu dan nav-right */
+    /* Tampilkan tombol hamburger di mobile */
+    .hamburger-menu {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    /* Sembunyikan menu utama di mobile secara default */
+    .mobile-menu-container {
+        display: none;
+        flex-direction: column; /* Menu disusun vertikal */
+        position: fixed; /* Jadikan menu sebagai overlay */
+        top: 80px; /* Di bawah header */
+        right: 0;
+        width: 100%; /* Lebar penuh layar */
+        height: calc(100% - 80px); /* Tinggi sisa layar */
+        background-color: #00254B; /* Warna latar belakang menu */
+        z-index: 999; /* Di bawah header tapi di atas konten */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        overflow-y: auto; /* Memungkinkan scroll jika menu panjang */
+        padding: 20px;
+        box-sizing: border-box;
+        
+        /* Animasi slide-in (opsional, bisa ditambahkan) */
+        transform: translateX(100%);
+        transition: transform 0.3s ease-out;
+    }
+
+    /* Saat menu aktif (dengan JavaScript) */
+    .mobile-menu-container.active {
+        display: flex; /* Tampilkan saat aktif */
+        transform: translateX(0);
+    }
+
     .nav-menu {
-        flex-direction: column; /* Menu disusun ke bawah */
-        gap: 10px;
+        flex-direction: column;
         width: 100%;
-        text-align: center;
-        margin-top: 15px;
+        margin-top: 20px;
+        gap: 15px; /* Jarak antar item menu */
+    }
+
+    .nav-menu li a {
+        padding: 10px 0;
+        display: block;
+        text-align: left; /* Teks menu rata kiri */
+        font-size: 18px;
+    }
+
+    .lang-selector {
+        width: 100%;
+        margin-top: 30px; /* Jarak dari menu navigasi */
+        padding-top: 15px;
+        border-top: 1px solid rgba(255,255,255,0.2);
+        justify-content: flex-start; /* Sejajarkan ke kiri */
+    }
+
+    .lang-display {
+        width: 100%; /* Agar bisa mengambil lebar penuh */
+        justify-content: flex-start; /* Sejajarkan bendera ke kiri */
     }
     
-    .nav-right {
+    .lang-dropdown {
+        position: static; /* Biar dropdown muncul di bawahnya di mobile */
+        margin-top: 10px;
         width: 100%;
-        justify-content: center;
-        margin-top: 15px;
+        right: auto;
+        left: 0;
+        background-color: rgba(255,255,255,0.9); /* Latar belakang lebih terang */
+        box-shadow: none;
+    }
+    
+    .lang-dropdown .lang-option {
+        padding: 10px 15px;
     }
 }
