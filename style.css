@@ -704,11 +704,11 @@ body.visi-misi-page .misi-item p {
 }
 
 .prev-button {
-    left: 50px;
+    left: 25px;
 }
 
 .next-button {
-    right: 50px;
+    right: 25px;
 }
 
 /* --- Gaya Halaman Dokumen --- */
@@ -928,5 +928,27 @@ body.contact-page .contact-info a {
     
     .lang-dropdown .lang-option {
         padding: 10px 15px;
+    }
+
+    .carousel-slide-page {
+        /* Ubah tata letak dari baris menjadi kolom */
+        flex-direction: column;
+        /* Atur agar setiap kartu memiliki lebar yang sama */
+        align-items: center; 
+        /* Berikan jarak antar kartu */
+        gap: 15px; 
+    }
+
+    .card {
+        /* Atur agar kartu mengambil seluruh lebar yang tersedia di mobile */
+        width: 250px; 
+        height: auto; /* Biarkan tinggi menyesuaikan konten */
+        padding: 25px; /* Tambahkan padding agar terlihat lebih baik */
+        margin: 0 auto; /* Pusatkan kartu di tengah */
+        min-height: 120px; /* Nilai ini bisa disesuaikan */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 }
