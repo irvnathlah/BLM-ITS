@@ -342,4 +342,27 @@ document.addEventListener('DOMContentLoaded', function() {
     if (carouselTrack) {
         resetAutoSlide();
     }
+    
+    // --- Kode untuk Hamburger Menu (baru) ---
+    const hamburgerBtn = document.querySelector('.hamburger-menu');
+    const mobileMenuContainer = document.querySelector('.mobile-menu-container');
+    const navMenu = document.querySelector('.nav-menu'); // Ambil ul.nav-menu
+
+    if (hamburgerBtn && mobileMenuContainer && navMenu) {
+        hamburgerBtn.addEventListener('click', function() {
+            mobileMenuContainer.classList.toggle('active');
+            // Ganti ikon hamburger menjadi 'x' atau sebaliknya
+            this.querySelector('i').classList.toggle('fa-bars');
+            this.querySelector('i').classList.toggle('fa-times');
+        });
+
+        // Tutup menu saat salah satu item menu diklik
+        navMenu.querySelectorAll('a').forEach(item => {
+            item.addEventListener('click', function() {
+                mobileMenuContainer.classList.remove('active');
+                hamburgerBtn.querySelector('i').classList.remove('fa-times');
+                hamburgerBtn.querySelector('i').classList.add('fa-bars');
+            });
+        });
+    }    
 });
