@@ -10,22 +10,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="about-page">
 
-    <header>
-        <nav>
-            <div class="nav-left">
-                <a href="index.html" class="logo-link">
-                    <img src="images/logo-blm-its-header.png" alt="Logo BLM ITS" class="logo">
-                    <div class="header-text">
-                        <span data-key="org-name-1">BADAN LEGISLATIF MAHASISWA</span>
-                        <br>
-                        <span data-key="org-name-2">INSTITUT TEKNOLOGI SEPULUH NOPEMBER</span>
-                    </div>
-                </a>
-            </div>
+<header>
+    <nav>
+        <div class="nav-left">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo-blm-its-header.png" alt="Logo BLM ITS" class="logo">
+                <div class="header-text">
+                    <span data-key="org-name-1">BADAN LEGISLATIF MAHASISWA</span>
+                    <br>
+                    <span data-key="org-name-2">INSTITUT TEKNOLOGI SEPULUH NOPEMBER</span>
+                </div>
+            </a>
+        </div>
 
-            <div class="nav-right">
+        <div class="nav-right">
+            <button class="hamburger-menu" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+
+            <div class="mobile-menu-container">
                 <ul class="nav-menu">
                     <li><a href="index.html" data-key="nav-home">Beranda</a></li>
                     <li><a href="about.html" data-key="nav-about">Tentang Kami</a></li>
@@ -33,7 +38,6 @@
                     <li><a href="contact.html" data-key="nav-contact">Kontak</a></li>
                 </ul>
 
-                <!-- ✅ Language Selector -->
                 <div class="lang-selector">
                     <div class="lang-display">
                         <img id="current-flag" src="images/flag-indonesia.png" alt="Bendera Indonesia">
@@ -50,25 +54,26 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </nav>
-    </header>
+            </div> </div>
+    </nav>
+</header>
 
 <main class="about-hero">
     <div class="about-hero-overlay">
         <div class="about-hero-content fade-in">
-            <h1 data-key="about-heading">Informasi Umum BLM ITS</h1>
-            <p data-key="about-text">Badan Legislatif Mahasiswa Institut Teknologi Sepuluh Nopember (BLM ITS) adalah lembaga legislatif tertinggi di Keluarga Mahasiswa ITS yang bersifat representatif terhadap seluruh mahasiswa ITS. BLM ITS terdiri atas Dewan Mahasiswa dan Senat Mahasiswa. Secara struktural, BLM ITS terdiri dari satu Ketua Umum dan dua Sekretaris Jenderal yang berfungsi sebagai koordinator dan anggota-anggota. Ketua Umum ini berasal dari Dewan Mahasiswa dan dua Sekretaris Jenderal masing-masing berasal dari Senat Mahasiswa dan Dewan Mahasiswa. Berdasarkan Buku KDKM dan HDPSM MUBES V ITS, BAB III tentang Legislatif Mahasiswa pasal 25, BLM ITS bertugas:</p>
-
-            <ul class="tasks-list">
-                <li data-key="task-1">Melakukan kontrol terhadap kinerja BEM ITS.</li>
-                <li data-key="task-2">Melakukan penjaringan aspirasi.</li>
-                <li data-key="task-3">Memasyarakatkan Ketetapan MUBES ITS.</li>
-                <li data-key="task-4">Mengajukan RUU kepada BEM ITS.</li>
-                <li data-key="task-5">Melakukan penjaringan dan uji kelayakan kandidat anggota Mahkamah Mahasiswa.</li>
-                <li data-key="task-6">Melakukan penjaringan dan uji kelayakan kandidat anggota Komisi Pemilihan Umum dan Badan Pemeriksa Dana Kampanye Pemilihan Umum ITS.</li>
-                <li data-key="task-7">Menyelenggarakan Musyawarah Mahasiswa ITS dan Musyawarah Tingkat Tinggi ITS.</li>
-            </ul>
+            <div class="content-box">
+                <h1 data-key="about-heading">Informasi Umum BLM ITS</h1>
+                <p data-key="about-text">Badan Legislatif Mahasiswa Institut Teknologi Sepuluh Nopember (BLM ITS) adalah lembaga legislatif tertinggi di Keluarga Mahasiswa ITS yang bersifat representatif terhadap seluruh mahasiswa ITS. BLM ITS terdiri atas Dewan Mahasiswa dan Senat Mahasiswa. Secara struktural, BLM ITS terdiri dari satu Ketua Umum dan dua Sekretaris Jenderal yang berfungsi sebagai koordinator dan anggota-anggota. Ketua Umum ini berasal dari Dewan Mahasiswa dan dua Sekretaris Jenderal masing-masing berasal dari Senat Mahasiswa dan Dewan Mahasiswa. Berdasarkan Buku KDKM dan HDPSM MUBES V ITS, BAB III tentang Legislatif Mahasiswa pasal 25, BLM ITS bertugas:</p>
+                <ul class="tasks-list">
+                    <li data-key="task-1">Melakukan kontrol terhadap kinerja BEM ITS.</li>
+                    <li data-key="task-2">Melakukan penjaringan aspirasi.</li>
+                    <li data-key="task-3">Memasyarakatkan Ketetapan MUBES ITS.</li>
+                    <li data-key="task-4">Mengajukan RUU kepada BEM ITS.</li>
+                    <li data-key="task-5">Melakukan penjaringan dan uji kelayakan kandidat anggota Mahkamah Mahasiswa.</li>
+                    <li data-key="task-6">Melakukan penjaringan dan uji kelayakan kandidat anggota Komisi Pemilihan Umum dan Badan Pemeriksa Dana Kampanye Pemilihan Umum ITS.</li>
+                    <li data-key="task-7">Menyelenggarakan Musyawarah Mahasiswa ITS dan Musyawarah Tingkat Tinggi ITS.</li>
+                </ul>
+            </div>
         </div>
     </div>
 </main>
